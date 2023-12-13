@@ -60,6 +60,22 @@
             Console.WriteLine($"Always positive is {Math.Abs(-25)}");
             Console.WriteLine($"Cos of 1 is {Math.Cos(1)}");
             */
+
+            /*
+            //Random
+            Random dice = new Random();
+            int numEyes;
+
+            for (int i = 0; i < 10; i++)
+            {
+                numEyes = dice.Next(1, 7);
+                Console.WriteLine(numEyes);
+            }
+
+            int fortune = dice.Next(1, 4);
+            string response = fortune == 1 ? "Yes" : fortune == 2 ? "No" : "Maybe";
+            Console.WriteLine(response);
+            */
         }
     }
 }
