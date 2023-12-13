@@ -1,5 +1,10 @@
 ﻿namespace AdvancedCSharp
 {
+    //enums
+
+    enum Day { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };
+    enum Month { Jan, Feb, Mar, Apr, May, Jun, Jul=12, Aug, Sep, Oct, Nov, Dec };
+
     // Structs do not support inheritance, but they can implement interfaces.
     struct Game
     {
@@ -21,6 +26,7 @@
     {
         static void Main(string[] args)
         {
+            /*
             Game game1;
 
             game1.name = "Pokemon Go";
@@ -29,6 +35,31 @@
             game1.releaseDate = "July 6, 2016";
 
             game1.Display();            
+            */
+
+            /*
+            Day fr = Day.Friday;
+            Day su = Day.Sunday;
+
+            Day a = Day.Friday;
+
+            Console.WriteLine(fr==a);
+            Console.WriteLine((int)Month.Aug);
+
+            Console.WriteLine($"Ceiling: {Math.Ceiling(15.3)}");
+            Console.WriteLine($"Floor: {Math.Floor(15.3)}");
+
+            int num1 = 13;
+            int num2 = 9;
+
+            Console.WriteLine($"Lower of {num1} and {num2} is {Math.Min(num1, num2)}");
+            Console.WriteLine($"Higher of {num1} and {num2} is {Math.Max(num1, num2)}");
+
+            Console.WriteLine($"3 to the power of 5 is {Math.Pow(3, 5)}");
+            Console.WriteLine($"PI is {Math.PI}");
+            Console.WriteLine($"Always positive is {Math.Abs(-25)}");
+            Console.WriteLine($"Cos of 1 is {Math.Cos(1)}");
+            */
         }
     }
 }
