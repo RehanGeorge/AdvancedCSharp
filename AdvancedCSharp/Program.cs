@@ -1,4 +1,8 @@
-﻿namespace AdvancedCSharp
+﻿using System.Runtime.CompilerServices;
+using System.IO;
+using System.Text.RegularExpressions;
+
+namespace AdvancedCSharp
 {
     //enums
 
@@ -76,6 +80,36 @@
             string response = fortune == 1 ? "Yes" : fortune == 2 ? "No" : "Maybe";
             Console.WriteLine(response);
             */
+
+            RegEx();
+        }
+        public static void RegEx()
+        {
+            //Read from a file
+            string[] text = File.ReadAllLines(@"C:\Users\Rehan George\source\repos\AdvancedCSharp\Sample.txt");
+
+            string pattern = @"\d{3}-\d{3}-\d{4}";
+
+            foreach (string line in text)
+            {
+                if (System.Text.RegularExpressions.Regex.IsMatch(line, pattern))
+                {
+                    Console.WriteLine(line);
+                }
+            }
+
+            Regex regex = new Regex(pattern);
+
+            string test = "My number is 123-456-7890";
+            MatchCollection matchCollection = regex.Matches(test);
+
+            Console.WriteLine(matchCollection.Count);
+
+            foreach (Match m in matchCollection)
+            {
+                GroupCollection groupCollection = m.Groups;
+                Console.WriteLine($"{groupCollection[0].Value} found at {groupCollection[0].Index}");
+            }
         }
     }
 }
